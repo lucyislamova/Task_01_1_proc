@@ -27,13 +27,13 @@ public class Main {
         System.out.printf("Сторона %s: ", sideName);
         float side = scanner.nextFloat();
         if (side <= 0)
-            throw new IllegalArgumentException("Введите корректные данные: сторона треугольника должна быть больше 0");
+            throw new IllegalArgumentException("Сторона треугольника должна быть больше 0");
         return side;
     }
 
     private static void checkTriangle(float sideA, float sideB, float sideC) {
         if (sideA > (sideB + sideC) || sideB > (sideB + sideC) || sideC > (sideA + sideB)) {
-            throw new IllegalArgumentException("Введите корректные данные: сторона треугольника не может быть больше суммы 2х других сторон");
+            throw new IllegalArgumentException("Сторона треугольника не может быть больше суммы 2х других сторон");
         }
     }
 
